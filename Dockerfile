@@ -5,4 +5,4 @@ RUN apt-get update && \
 	useradd -c "application user" -d /app -s /bin/bash -m app -u 99 --system
 WORKDIR /app
 USER app
-ENTRYPOINT ["python"]
+ENTRYPOINT ["/usr/bin/python3"]
