@@ -1,4 +1,4 @@
-FROM python:3.8.3-slim
+FROM python:3.9.0-slim
 ARG BUILD_DATE
 ARG BUILD_URL
 ARG GIT_URL
@@ -15,7 +15,7 @@ LABEL maintainer="Kristian Berg <kristian.berg@evry.com>" \
       org.opencontainers.image.revision=$GIT_COMMIT \
       org.opencontainers.image.vendor="EVRY Financial Services" \
       org.opencontainers.image.licenses="proprietary-license" \
-      org.opencontainers.image.description="Base image for python 3.8"
+      org.opencontainers.image.description="Base image for python 3"
 
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends curl
